@@ -3,9 +3,11 @@ import { AddStylistForm } from "./AddStylistForm";
 import { StylistInfo } from "./StylistInfo";
 
 export const StylistsPanel = () => {
-  const { data } = useGetStylistsQuery();
+  const { data, isFetching } = useGetStylistsQuery();
 
-  if (!data) return null;
+  if (isFetching) return <p>Loading...</p>
+
+  if (!data) return <p>No data</p>;
 
   return (
     <div>

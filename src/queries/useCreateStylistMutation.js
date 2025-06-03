@@ -4,7 +4,7 @@ import { useApi } from "../hooks/useApi";
 export const useCreateStylistMutation = () => {
   const { apiPost } = useApi();
 
-  const { mutate } = useMutation({
+  const { mutate, isPending } = useMutation({
     mutationKey: ["stylists", "create"],
     mutationFn: async (payload) => {
       return apiPost("stylists", payload);
@@ -13,5 +13,6 @@ export const useCreateStylistMutation = () => {
 
   return {
     mutate,
+    isPending,
   };
 };

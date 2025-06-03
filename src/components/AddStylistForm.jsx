@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useCreateStylistMutation } from "../queries/useCreateStylistMutation";
 
 export const AddStylistForm = () => {
-  const {mutate} = useCreateStylistMutation();
+  const {mutate, isPending} = useCreateStylistMutation();
   const [values, setValues] = useState({
     firstName: '',
     lastName: '',
@@ -49,7 +49,7 @@ export const AddStylistForm = () => {
           <option value="hairdressing">hairdressing</option>
         </select>
       </div>
-      <button type="submit">Add stylist</button>
+      <button type="submit" disabled={isPending}>Add stylist</button>
     </form>
   );
 };
