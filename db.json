@@ -4,43 +4,49 @@
       "id": 1,
       "firstName": "Anna",
       "lastName": "Latte",
-      "specialty": "Manicure"
+      "specialty": "manicure"
     },
     {
       "id": 2,
       "firstName": "Julia",
       "lastName": "White",
-      "specialty": "Hairdressing"
+      "specialty": "hairdressing"
     },
     {
       "id": 3,
       "firstName": "Monika",
       "lastName": "Cappuccino",
-      "specialty": "Cosmetology"
+      "specialty": "cosmetology"
     },
     {
       "id": 4,
       "firstName": "Tomasz",
       "lastName": "Cortado",
-      "specialty": "Cosmetology"
+      "specialty": "cosmetology"
     },
     {
       "id": 5,
       "firstName": "Adam",
       "lastName": "Matcha",
-      "specialty": "Manicure"
+      "specialty": "manicure"
     },
     {
       "id": 6,
       "firstName": "Dariusz",
       "lastName": "Yerba",
-      "specialty": "Manicure"
+      "specialty": "manicure"
     },
     {
       "id": 7,
       "firstName": "Justyna",
       "lastName": "Espresso",
-      "specialty": "Hairdressing"
+      "specialty": "hairdressing"
+    },
+    {
+      "id": "9593",
+      "firstName": "Weronika",
+      "lastName": "Cappuccina",
+      "specialty": "manicure"
     }
   ],
   "clients": [
