@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useCreateStylistMutation } from "../queries/useCreateStylistMutation";
+import { useCreateStylistMutation } from "../../queries/useCreateStylistMutation";
 import { StylistForm } from "./StylistForm";
 
 export const AddStylist = () => {

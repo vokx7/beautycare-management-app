@@ -1,6 +1,6 @@
 import { useState } from "react";
+import { useUpdateStylistMutation } from "../../queries/useUpdateStylistMutation";
 import { StylistForm } from "./StylistForm";
-import { useUpdateStylistMutation } from "../queries/useUpdateStylistMutation";
 
 export const EditStylist = ({stylist}) => {
       const {mutate, isPending} = useUpdateStylistMutation(stylist.id);

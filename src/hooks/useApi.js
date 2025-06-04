@@ -9,7 +9,7 @@ export const useApi = () => {
       method !== "PUT"
     ) {
       throw new Error(
-        'Invalid method. Only "GET", "POST" or "DELETE" allowed.'
+        'Invalid method. Only "GET", "POST", "PUT" or "DELETE" allowed.'
       );
     }
     const fetchConfig = {
@@ -47,9 +47,14 @@ export const useApi = () => {
     return await call(url, "PUT", payload);
   };
 
+  const apiDelete = async (url) => {
+    return await call(url, "DELETE");
+  };
+
   return {
     apiGet,
     apiPost,
     apiPut,
+    apiDelete,
   };
 };

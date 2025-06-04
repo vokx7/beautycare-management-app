@@ -1,4 +1,4 @@
-import { StylistsPanel } from "./StylistsPanel"
+import { StylistsPanel } from "./stylists/StylistsPanel"
 
 export const Main = () => {
     return <div>

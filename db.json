@@ -1,10 +1,10 @@
 {
   "stylists": [
     {
+      "id": "1",
       "firstName": "Anna",
       "lastName": "Latte",
-      "specialty": "hairdressing",
-      "id": "1"
+      "specialty": "hairdressing"
     },
     {
       "id": "2",
@@ -43,22 +43,16 @@
       "specialty": "hairdressing"
     },
     {
-      "id": "9593",
       "firstName": "Weronika",
-      "lastName": "Cappuccina",
-      "specialty": "manicure"
-    },
-    {
-      "id": "a1c6",
-      "firstName": "Michał",
-      "lastName": "Juice",
-      "specialty": "cosmetology"
-    },
-    {
-      "firstName": "Lili",
-      "lastName": "Ice",
+      "lastName": "Cappuccinaa",
       "specialty": "manicure",
-      "id": "f451"
+      "id": "9593"
+    },
+    {
+      "id": "6ae4",
+      "firstName": "Michał",
+      "lastName": "Senora",
+      "specialty": "hairdressing"
     }
   ],
   "clients": [

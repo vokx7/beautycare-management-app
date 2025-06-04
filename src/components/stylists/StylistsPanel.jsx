@@ -1,4 +1,4 @@
-import { useGetStylistsQuery } from "../queries/useGetStylistsQuery";
+import { useGetStylistsQuery } from "../../queries/useGetStylistsQuery";
 import { AddStylist } from "./AddStylist";
 import { StylistInfo } from "./StylistInfo";
 
