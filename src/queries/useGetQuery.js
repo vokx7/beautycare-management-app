@@ -1,13 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import { useApi } from "../hooks/useApi";
 
-export const useGetStylistsQuery = () => {
+export const useGetQuery = (url) => {
   const { apiGet } = useApi();
 
   const { data, isFetching } = useQuery({
-    queryKey: ["stylists"],
+    queryKey: [url],
     queryFn: async () => {
-      return apiGet("stylists");
+      return apiGet(url);
     },
   });
 

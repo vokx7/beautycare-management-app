@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useCreateStylistMutation } from "../../queries/useCreateStylistMutation";
+import { useCreateMutation } from "../../queries/useCreateMutation";
 import { StylistForm } from "./StylistForm";
 
 export const AddStylist = () => {
-  const {mutate, isPending} = useCreateStylistMutation();
+  const {mutate, isPending} = useCreateMutation("stylists");
   const [values, setValues] = useState({
     firstName: '',
     lastName: '',

@@ -1,9 +1,9 @@
-import { useGetStylistsQuery } from "../../queries/useGetStylistsQuery";
+import { useGetQuery } from "../../queries/useGetQuery";
 import { AddStylist } from "./AddStylist";
 import { StylistInfo } from "./StylistInfo";
 
 export const StylistsPanel = () => {
-  const { data, isFetching } = useGetStylistsQuery();
+  const { data, isFetching } = useGetQuery("stylists");
 
   if (isFetching) return <p>Loading...</p>
 

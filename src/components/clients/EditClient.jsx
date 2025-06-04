@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useUpdateMutation } from "../../queries/useUpdateMutation";
-import { StylistForm } from "./StylistForm";
+import { ClientForm } from "./ClientForm";
 
-export const EditStylist = ({stylist}) => {
-      const {mutate, isPending} = useUpdateMutation("stylists", stylist.id);
+export const EditClient = ({client}) => {
+      const {mutate, isPending} = useUpdateMutation("clients", client.id);
       const [values, setValues] = useState({
-        firstName: stylist.firstName,
-        lastName: stylist.lastName,
-        specialty: stylist.specialty
+        firstName: client.firstName,
+        lastName: client.lastName,
+        phone: client.phone
       })
     
       const handleChange = (e) => {
@@ -24,10 +24,10 @@ export const EditStylist = ({stylist}) => {
         mutate({
           firstName: values.firstName,
           lastName: values.lastName,
-          specialty: values.specialty
+          phone: values.phone
         })
       }
       return (
-        <StylistForm handleChange={handleChange} handleSubmit={handleSubmit} values={values} isPending={isPending} />
+        <ClientForm handleChange={handleChange} handleSubmit={handleSubmit} values={values} isPending={isPending} />
       );
 }

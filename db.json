@@ -53,28 +53,46 @@
       "firstName": "Michał",
       "lastName": "Senora",
       "specialty": "hairdressing"
+    },
+    {
+      "id": "0546",
+      "firstName": "Lila",
+      "lastName": "Ice",
+      "specialty": "manicure"
+    },
+    {
+      "firstName": "Sandra",
+      "lastName": "Bullocccc",
+      "specialty": "manicure",
+      "id": "c991"
     }
   ],
   "clients": [
     {
-      "id": "1",
       "firstName": "Sandra",
       "lastName": "Berry",
-      "phone": "123456789"
+      "phone": "123456786",
+      "id": "1"
     },
     {
       "id": "2",
       "firstName": "Piotr",
       "lastName": "Peach",
       "phone": "987654321"
+    },
+    {
+      "id": "cf0a",
+      "firstName": "Weronika",
+      "lastName": "Kwiat",
+      "phone": "111222333"
     }
   ],
   "treatmentTypes": [
     {
-      "id": "1",
       "name": "Women's haircut",
       "duration": 45,
-      "price": 100
+      "price": "110",
+      "id": "1"
     },
     {
       "id": "2",
@@ -99,6 +117,12 @@
       "name": "Facial treatment",
       "duration": 60,
       "price": 170
+    },
+    {
+      "id": "5e36",
+      "name": "Man's haircut",
+      "duration": "30",
+      "price": "90"
     }
   ],
   "treatments": [
