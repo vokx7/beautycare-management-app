@@ -1,5 +1,5 @@
 import { useGetStylistsQuery } from "../queries/useGetStylistsQuery";
-import { AddStylistForm } from "./AddStylistForm";
+import { AddStylist } from "./AddStylist";
 import { StylistInfo } from "./StylistInfo";
 
 export const StylistsPanel = () => {
@@ -21,7 +21,7 @@ export const StylistsPanel = () => {
       </div>
       <div>
         <h2>Add new stylist form</h2>
-        <AddStylistForm />
+        <AddStylist/>
       </div>
     </div>
   );

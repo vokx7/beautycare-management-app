@@ -1,14 +1,14 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useApi } from "../hooks/useApi";
 
-export const useCreateStylistMutation = () => {
-  const { apiPost } = useApi();
+export const useUpdateStylistMutation = (stylistId) => {
+  const { apiPut } = useApi();
   const queryClient = useQueryClient();
 
   const { mutate, isPending } = useMutation({
-    mutationKey: ["stylists", "create"],
+    mutationKey: ["stylists", "update", stylistId],
     mutationFn: async (payload) => {
-      return apiPost("stylists", payload);
+      return apiPut(`stylists/${stylistId}`, payload);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({

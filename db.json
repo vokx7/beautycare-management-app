@@ -1,43 +1,43 @@
 {
   "stylists": [
     {
-      "id": 1,
       "firstName": "Anna",
       "lastName": "Latte",
-      "specialty": "manicure"
+      "specialty": "hairdressing",
+      "id": "1"
     },
     {
-      "id": 2,
+      "id": "2",
       "firstName": "Julia",
       "lastName": "White",
       "specialty": "hairdressing"
     },
     {
-      "id": 3,
+      "id": "3",
       "firstName": "Monika",
       "lastName": "Cappuccino",
       "specialty": "cosmetology"
     },
     {
-      "id": 4,
+      "id": "4",
       "firstName": "Tomasz",
       "lastName": "Cortado",
       "specialty": "cosmetology"
     },
     {
-      "id": 5,
+      "id": "5",
       "firstName": "Adam",
       "lastName": "Matcha",
       "specialty": "manicure"
     },
     {
-      "id": 6,
+      "id": "6",
       "firstName": "Dariusz",
       "lastName": "Yerba",
       "specialty": "manicure"
     },
     {
-      "id": 7,
+      "id": "7",
       "firstName": "Justyna",
       "lastName": "Espresso",
       "specialty": "hairdressing"
@@ -47,17 +47,29 @@
       "firstName": "Weronika",
       "lastName": "Cappuccina",
       "specialty": "manicure"
+    },
+    {
+      "id": "a1c6",
+      "firstName": "Michał",
+      "lastName": "Juice",
+      "specialty": "cosmetology"
+    },
+    {
+      "firstName": "Lili",
+      "lastName": "Ice",
+      "specialty": "manicure",
+      "id": "f451"
     }
   ],
   "clients": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "Sandra",
       "lastName": "Berry",
       "phone": "123456789"
     },
     {
-      "id": 2,
+      "id": "2",
       "firstName": "Piotr",
       "lastName": "Peach",
       "phone": "987654321"
@@ -65,31 +77,31 @@
   ],
   "treatmentTypes": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Women's haircut",
       "duration": 45,
       "price": 100
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Hybrid manicure",
       "duration": 90,
       "price": 120
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Hair dyeing",
       "duration": 120,
       "price": 250
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Hybrid pedicure",
       "duration": 90,
       "price": 150
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Facial treatment",
       "duration": 60,
       "price": 170
@@ -97,14 +109,14 @@
   ],
   "treatments": [
     {
-      "id": 1,
+      "id": "1",
       "treatmentTypeId": 1,
       "date": "2025-06-01",
       "stylistId": 2,
       "clientId": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "treatmentTypeId": 5,
       "date": "2025-05-30",
       "stylistId": 4,

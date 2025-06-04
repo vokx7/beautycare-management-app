@@ -2,7 +2,12 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 export const useApi = () => {
   const call = async (url, method, payload) => {
-    if (method !== "GET" && method !== "POST" && method !== "DELETE") {
+    if (
+      method !== "GET" &&
+      method !== "POST" &&
+      method !== "DELETE" &&
+      method !== "PUT"
+    ) {
       throw new Error(
         'Invalid method. Only "GET", "POST" or "DELETE" allowed.'
       );
@@ -38,8 +43,13 @@ export const useApi = () => {
     return await call(url, "POST", payload);
   };
 
+  const apiPut = async (url, payload) => {
+    return await call(url, "PUT", payload);
+  };
+
   return {
     apiGet,
     apiPost,
+    apiPut,
   };
 };
