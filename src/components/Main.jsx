@@ -1,5 +1,6 @@
 import { ClientsPanel } from "./clients/ClientsPanel"
 import { StylistsPanel } from "./stylists/StylistsPanel"
+import { TreatmentsPanel } from "./treatments/TreatmentsPanel"
 import { TreatmentTypesPanel } from "./treatmentTypes/TreatmentTypesPanel"
 
 export const Main = () => {
@@ -11,5 +12,6 @@ export const Main = () => {
         <hr/>
         <TreatmentTypesPanel/>
         <hr/>
+        <TreatmentsPanel/>
     </div>
 }
