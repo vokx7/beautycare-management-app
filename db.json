@@ -56,7 +56,7 @@
     },
     {
       "firstName": "Sandra",
-      "lastName": "Bullocccc",
+      "lastName": "Bulloc",
       "specialty": "manicure",
       "id": "c991"
     }
@@ -86,44 +86,50 @@
       "name": "Women's haircut",
       "duration": "45",
       "price": "110",
-      "id": "1"
+      "id": "1",
+      "specialty": "hairdressing"
     },
     {
       "id": "2",
       "name": "Hybrid manicure",
       "duration": "90",
-      "price": "120"
+      "price": "120",
+      "specialty": "manicure"
     },
     {
       "id": "3",
       "name": "Hair dyeing",
       "duration": "120",
-      "price": "250"
+      "price": "250",
+      "specialty": "hairdressing"
     },
     {
       "id": "4",
       "name": "Hybrid pedicure",
       "duration": "90",
-      "price": "150"
+      "price": "150",
+      "specialty": "manicure"
     },
     {
       "id": "5",
       "name": "Facial treatment",
       "duration": "60",
-      "price": "170"
+      "price": "170",
+      "specialty": "cosmetology"
     },
     {
       "id": "5e36",
       "name": "Man's haircut",
       "duration": "30",
-      "price": "90"
+      "price": "90",
+      "specialty": "hairdressing"
     }
   ],
   "treatments": [
     {
       "treatmentTypeId": "4",
       "date": "2025-06-03",
-      "stylistId": null,
+      "stylistId": "6ae4",
       "clientId": "1",
       "id": "1"
     },
