@@ -1,17 +1,11 @@
 import { useState } from "react";
 import { EditClient } from "./EditClient";
-import styled from "styled-components";
 import avatar from "../../assets/avatar.png";
 import { SlPencil } from "react-icons/sl";
 import { StyledButtonEdit } from "../styles/StyledButtonEdit";
 import { StyledInfoBox } from "../styles/StyledInfoBox";
 import { StyledAvatar } from "../styles/StyledAvatar";
-
-const StyledDetails = styled.p`
-  color: ${({ theme }) => theme.colors.secondary};
-  font-size: 12px;
-  letter-spacing: 1px;
-`;
+import { StyledInfoDetails } from "../styles/StyledInfoDetails";
 
 export const ClientInfo = ({ client }) => {
   const [mode, setMode] = useState("none");
@@ -26,7 +20,7 @@ export const ClientInfo = ({ client }) => {
         <p>
           {client.firstName} {client.lastName}
         </p>
-        <StyledDetails>tel. {client.phone}</StyledDetails>
+        <StyledInfoDetails>tel. {client.phone}</StyledInfoDetails>
         <StyledButtonEdit onClick={toggleEditMode}>
           {mode === "edit" ? (
             "Cancel"

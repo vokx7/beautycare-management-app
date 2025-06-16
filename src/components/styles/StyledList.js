@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const StyledList = styled.ul`
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 14px;
   padding: 0;
   padding-bottom: 45px;
@@ -16,6 +15,6 @@ export const StyledList = styled.ul`
     gap: 20px;
     overflow-y: unset;
     max-height: none;
-    align-items: stretch;
+    align-items: stretch;ś
   }
 `;

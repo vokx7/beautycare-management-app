@@ -13,7 +13,7 @@ export const ClientForm = ({
       <StyledInputDiv>
         <label htmlFor="firstName">First name: </label>
         <StyledInput
-          placeholder="Type your name"
+          placeholder="Type client's name"
           type="text"
           name="firstName"
           id="firstName"
@@ -24,7 +24,7 @@ export const ClientForm = ({
       <StyledInputDiv>
         <label htmlFor="lastName">Last name: </label>
         <StyledInput
-          placeholder="Type your last name"
+          placeholder="Type client's last name"
           type="text"
           name="lastName"
           id="lastName"
@@ -35,7 +35,7 @@ export const ClientForm = ({
       <StyledInputDiv>
         <label htmlFor="phone">Phone number: </label>
         <StyledInput
-          placeholder="Type your phone number"
+          placeholder="Type client's phone number"
           type="text"
           name="phone"
           id="phone"
