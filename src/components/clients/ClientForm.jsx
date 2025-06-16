@@ -1,36 +1,6 @@
-import styled from "styled-components";
-
-const StyledInputDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 10px 0;
-`;
-
-const StyledInput = styled.input`
-  display: flex;
-  align-self: stretch;
-  padding: 10px 15px;
-  background: white;
-  border-radius: 40px;
-  border: 1px solid #fafafa;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
-`;
-
-const StyledButton = styled.button`
-  background: #f5f7fa;
-  color: #222222;
-  border-radius: 40px;
-  margin: 10px 0;
-  padding: 10px 0;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  width: 100%;
-`;
+import { StyledButtonForm } from "../styles/StyledButtonForm";
+import { StyledInput } from "../styles/StyledInput";
+import { StyledInputDiv } from "../styles/StyledInputDiv";
 
 export const ClientForm = ({
   handleSubmit,
@@ -73,9 +43,9 @@ export const ClientForm = ({
           onChange={handleChange}
         />
       </StyledInputDiv>
-      <StyledButton type="submit" disabled={isPending}>
+      <StyledButtonForm type="submit" disabled={isPending}>
         Save
-      </StyledButton>
+      </StyledButtonForm>
     </form>
   );
 };
