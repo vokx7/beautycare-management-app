@@ -1,20 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-
+export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: "Lato", sans-serif;
     background: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.primary};
+    font-style: ${({ theme }) => theme.fonts.primary}
   }
 
   *, *::before, *::after {
     box-sizing: border-box;
+    font-family: ${({ theme }) => theme.fonts.primary};
   }
 `;
-
-export default GlobalStyle;

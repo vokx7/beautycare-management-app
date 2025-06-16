@@ -63,7 +63,7 @@
   ],
   "clients": [
     {
-      "firstName": "Sandra",
+      "firstName": "Sandraa",
       "lastName": "Berry",
       "phone": "123456786",
       "id": "1"
@@ -79,6 +79,18 @@
       "firstName": "Weronika",
       "lastName": "Kwiat",
       "phone": "111222333"
+    },
+    {
+      "id": "0486",
+      "firstName": "Lala",
+      "lastName": "Lola",
+      "phone": "234567890"
+    },
+    {
+      "id": "caaa",
+      "firstName": "Opa",
+      "lastName": "Lopa",
+      "phone": "234444222"
     }
   ],
   "treatmentTypes": [

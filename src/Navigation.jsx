@@ -1,19 +1,25 @@
 import { Outlet } from "react-router-dom";
 import { AppLink } from "./AppLink";
+
+import {
+  SlHome,
+  SlPeople,
+  SlBookOpen,
+  SlPuzzle,
+  SlMagicWand,
+} from "react-icons/sl";
+
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: ${({ theme }) => theme.colors.background};
-  padding: 5px 0;
-  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 10px 10px 0 0;
-  position: fixed;
   width: 100%;
-  z-index: 10;
+  position: fixed;
   padding: 10px 0;
+  background: ${({ theme }) => theme.colors.background};
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top: 1px #f5f7fa solid;
+  position: fixed;
 
   /* Desktop: Top navbar */
   top: 0;
@@ -48,18 +54,34 @@ export const Navigation = () => {
       <header>
         <Nav>
           <DesktopOnly>
-            <AppLink to=".">Home</AppLink>
-            <AppLink to="/stylists">Stylists</AppLink>
-            <AppLink to="/clients">Clients</AppLink>
-            <AppLink to="/treatmentTypes">Treatment Types</AppLink>
-            <AppLink to="/treatments">Treatments</AppLink>
+            <AppLink to="/stylists" title={"Stylists"} />
+            <AppLink to="/clients" title={"Clients"} />
+            <AppLink to="." title={"Home"} />
+            <AppLink to="/treatmentTypes" title={"Services"} />
+            <AppLink to="/treatments" title={"History"} />
           </DesktopOnly>
           <MobileOnly>
-            <AppLink to=".">Home</AppLink>
-            <AppLink to="/stylists">Stylists</AppLink>
-            <AppLink to="/clients">Clients</AppLink>
-            <AppLink to="/treatmentTypes">Treatment Types</AppLink>
-            <AppLink to="/treatments">Treatments</AppLink>
+            <AppLink
+              to="/clients"
+              icon={<SlPeople size={32} />}
+              title="Clients"
+            />
+            <AppLink
+              to="/stylists"
+              icon={<SlMagicWand size={32} />}
+              title="Stylists"
+            />
+            <AppLink to="." icon={<SlHome size={32} />} title="Home" />
+            <AppLink
+              to="/treatmentTypes"
+              icon={<SlPuzzle size={32} />}
+              title="Services"
+            />
+            <AppLink
+              to="/treatments"
+              icon={<SlBookOpen size={32} />}
+              title="History"
+            />
           </MobileOnly>
         </Nav>
       </header>

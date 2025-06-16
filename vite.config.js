@@ -6,12 +6,12 @@ export default defineConfig({
   plugins: [
     react({
       plugins: [
-        // [
-        //   "@swc/plugin-styled-components",
-        //   {
-        //     displayName: true,
-        //   },
-        // ],
+        [
+          "@swc/plugin-styled-components",
+          {
+            displayName: true,
+          },
+        ],
       ],
     }),
   ],

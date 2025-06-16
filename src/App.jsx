@@ -8,6 +8,7 @@ import { TreatmentsPanel } from "./components/treatments/TreatmentsPanel";
 import { Navigation } from "./Navigation";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styled";
+import { GlobalStyle } from "../GlobalStyle";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
 export const App = () => {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router}>
           <Home />

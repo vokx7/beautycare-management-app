@@ -1,3 +1,35 @@
+import styled from "styled-components";
+
+const Container = styled.div`
+  padding: 20px;
+  padding-top: 65px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+`;
+
+const Heading = styled.span`
+  color: ${({ theme }) => theme.colors.black};
+  font-size: 40px;
+  font-family: Italiana;
+  letter-spacing: 1.2px;
+  word-wrap: break-word;
+`;
+
+const SectionTitle = styled.span`
+  color: ${({ theme }) => theme.colors.text};
+  font-size: 16px;
+  letter-spacing: 1.2px;
+`;
+
 export const Home = () => {
-  return <h1>BeautyCare Management App!</h1>;
+  return (
+    <Container>
+      <Heading>
+        Beauty Care
+        <br /> Manager
+      </Heading>
+      <SectionTitle>Statistics</SectionTitle>
+    </Container>
+  );
 };

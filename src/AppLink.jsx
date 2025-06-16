@@ -1,22 +1,42 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const NavElement = styled(NavLink)`
-  color: ${({ theme }) => theme.colors.text};
-  text-decoration: none;
-  padding: 5px 15px;
-  border-radius: 5px;
+const StyledTitle = styled.span`
+  color: ${({ theme }) => theme.colors.secondary};
+  font-size: 12px;
   font-weight: 500;
+`;
+const StyledIcon = styled.div`
+  color: ${({ theme }) => theme.colors.secondary};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
-  &.active {
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.white};
+const NavElement = styled(NavLink)`
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  text-decoration: none;
+
+  &.active ${StyledTitle} {
+    color: ${({ theme }) => theme.colors.brand};
   }
 
-  &:hover {
-    background-color: #e2e6ea;
+  &.active ${StyledIcon} {
+    filter: brightness(1.2);
+    color: ${({ theme }) => theme.colors.brand};
   }
 `;
-export const AppLink = ({ to, children }) => {
-  return <NavElement to={to}>{children}</NavElement>;
+
+export const AppLink = ({ to, title, icon }) => {
+  return (
+    <NavElement to={to}>
+      <StyledIcon>{icon}</StyledIcon>
+      <StyledTitle>{title}</StyledTitle>
+    </NavElement>
+  );
 };
