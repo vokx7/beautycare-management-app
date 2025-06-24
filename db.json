@@ -135,6 +135,13 @@
       "duration": "30",
       "price": "90",
       "specialty": "hairdressing"
+    },
+    {
+      "name": "jjj",
+      "duration": "30",
+      "price": "110",
+      "specialty": "manicure",
+      "id": "8f74"
     }
   ],
   "treatments": [
