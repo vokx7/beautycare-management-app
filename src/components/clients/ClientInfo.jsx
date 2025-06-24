@@ -31,7 +31,9 @@ export const ClientInfo = ({ client }) => {
             </>
           )}
         </StyledButtonEdit>
-        {mode === "edit" ? <EditClient client={client} /> : undefined}
+        {mode === "edit" ? (
+          <EditClient client={client} onSuccess={() => setMode("none")} />
+        ) : null}
       </div>
       <StyledAvatar src={avatar} alt="user-avatar" />
     </StyledInfoBox>

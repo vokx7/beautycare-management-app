@@ -10,8 +10,6 @@ export const StylistsPanel = () => {
   const { data, isFetching } = useGetQuery("stylists");
   const [activeTab, setActiveTab] = useState("list");
 
-  if (isFetching) return <p>Loading...</p>;
-
   if (!data) return <p>No data</p>;
 
   return (
@@ -25,6 +23,7 @@ export const StylistsPanel = () => {
       />
       {activeTab === "list" && (
         <StyledList>
+          {isFetching && <p>Loading...</p>}
           {data.map((element) => (
             <StylistInfo stylist={element} key={element.id} />
           ))}

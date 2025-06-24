@@ -38,7 +38,9 @@ export const StylistInfo = ({ stylist }) => {
             </>
           )}
         </StyledButtonEdit>
-        {mode === "edit" ? <EditStylist stylist={stylist} /> : undefined}
+        {mode === "edit" ? (
+          <EditStylist stylist={stylist} onSuccess={() => setMode("none")} />
+        ) : null}
         {/* <button onClick={toggleDeleteMode}>{mode === 'delete' ? 'Cancel' : 'Delete'}</button>
             {mode === 'delete' ? <DeleteStylistConfirmation onCancel={toggleDeleteMode} stylist={stylist}/> : undefined} */}
       </div>

@@ -10,8 +10,6 @@ export const ClientsPanel = () => {
   const { data, isFetching } = useGetQuery("clients");
   const [activeTab, setActiveTab] = useState("list");
 
-  if (isFetching) return <p>Loading...</p>;
-
   if (!data) return <p>No data</p>;
 
   return (
@@ -25,6 +23,7 @@ export const ClientsPanel = () => {
       />
       {activeTab === "list" && (
         <StyledList>
+          {isFetching && <p>Loading...</p>}
           {data.map((element) => (
             <ClientInfo client={element} key={element.id} />
           ))}

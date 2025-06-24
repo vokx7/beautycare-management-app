@@ -3,6 +3,7 @@ import { StyledButtonForm } from "../styles/StyledButtonForm";
 import { StyledInput } from "../styles/StyledInput";
 import { StyledInputDiv } from "../styles/StyledInputDiv";
 import { SlArrowDown } from "react-icons/sl";
+import { FieldErrors } from "../FieldErrors";
 
 const StyledSelect = styled.select`
   padding: 10px 15px;
@@ -35,6 +36,7 @@ export const StylistForm = ({
   handleChange,
   values,
   isPending,
+  errors,
 }) => {
   return (
     <form onSubmit={handleSubmit}>
@@ -48,6 +50,7 @@ export const StylistForm = ({
           value={values.firstName}
           onChange={handleChange}
         />
+        <FieldErrors errors={errors.firstName} />
       </StyledInputDiv>
       <StyledInputDiv>
         <label htmlFor="lastName">Last name: </label>
@@ -59,6 +62,7 @@ export const StylistForm = ({
           value={values.lastName}
           onChange={handleChange}
         />
+        <FieldErrors errors={errors.lastName} />
       </StyledInputDiv>
       <StyledInputDiv>
         <label htmlFor="specialty">Specialty: </label>

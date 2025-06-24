@@ -1,12 +1,14 @@
 import { StyledButtonForm } from "../styles/StyledButtonForm";
 import { StyledInput } from "../styles/StyledInput";
 import { StyledInputDiv } from "../styles/StyledInputDiv";
+import { FieldErrors } from "../FieldErrors";
 
 export const ClientForm = ({
   handleSubmit,
   handleChange,
   values,
   isPending,
+  errors,
 }) => {
   return (
     <form onSubmit={handleSubmit}>
@@ -20,6 +22,7 @@ export const ClientForm = ({
           value={values.firstName}
           onChange={handleChange}
         />
+        <FieldErrors errors={errors.firstName} />
       </StyledInputDiv>
       <StyledInputDiv>
         <label htmlFor="lastName">Last name: </label>
@@ -31,6 +34,7 @@ export const ClientForm = ({
           value={values.lastName}
           onChange={handleChange}
         />
+        <FieldErrors errors={errors.lastName} />
       </StyledInputDiv>
       <StyledInputDiv>
         <label htmlFor="phone">Phone number: </label>
@@ -42,6 +46,7 @@ export const ClientForm = ({
           value={values.phone}
           onChange={handleChange}
         />
+        <FieldErrors errors={errors.phone} />
       </StyledInputDiv>
       <StyledButtonForm type="submit" disabled={isPending}>
         Save
