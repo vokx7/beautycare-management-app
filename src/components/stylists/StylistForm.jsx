@@ -3,7 +3,7 @@ import { StyledInput } from "../styles/StyledInput";
 import { StyledInputDiv } from "../styles/StyledInputDiv";
 import { SlArrowDown } from "react-icons/sl";
 import { FieldErrors } from "../FieldErrors";
-import { ArrowIcon, StyledSelectInput } from "../StyledSelectInput";
+import { ArrowIcon, StyledSelectInput } from "../styles/StyledSelectInput";
 
 export const StylistForm = ({
   handleSubmit,

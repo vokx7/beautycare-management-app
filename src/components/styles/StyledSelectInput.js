@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const StyledSelectInput = styled.select`
+  display: flex;
+  width: 100%;
+  align-self: stretch;
   padding: 10px 15px;
   background: white;
   border-radius: 40px;

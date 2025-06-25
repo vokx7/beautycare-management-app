@@ -53,24 +53,6 @@
       "firstName": "Michał",
       "lastName": "Senora",
       "specialty": "hairdressing"
-    },
-    {
-      "firstName": "Sandra",
-      "lastName": "Bulloc",
-      "specialty": "manicure",
-      "id": "c991"
-    },
-    {
-      "id": "434d",
-      "firstName": "Sandra",
-      "lastName": "rrr",
-      "specialty": "manicure"
-    },
-    {
-      "id": "bde3",
-      "firstName": "ooo",
-      "lastName": "ppp",
-      "specialty": "cosmetology"
     }
   ],
   "clients": [
@@ -95,10 +77,10 @@
   ],
   "treatmentTypes": [
     {
+      "id": "1",
       "name": "Women's haircut",
       "duration": "45",
       "price": "110",
-      "id": "1",
       "specialty": "hairdressing"
     },
     {
@@ -135,13 +117,6 @@
       "duration": "30",
       "price": "90",
       "specialty": "hairdressing"
-    },
-    {
-      "name": "jjj",
-      "duration": "30",
-      "price": "110",
-      "specialty": "manicure",
-      "id": "8f74"
     }
   ],
   "treatments": [
@@ -149,7 +124,7 @@
       "treatmentTypeId": "4",
       "date": "2025-06-03",
       "stylistId": "6ae4",
-      "clientId": "1",
+      "clientId": "2",
       "id": "1"
     },
     {

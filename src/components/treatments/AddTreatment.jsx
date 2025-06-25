@@ -2,17 +2,20 @@ import { useState } from "react";
 import { useCreateMutation } from "../../queries/useCreateMutation";
 import { TreatmentForm } from "./TreatmentForm";
 
-
-export const AddTreatment = ({treatmentTypes,
-  clients,
-  stylists}) => {
+export const AddTreatment = ({ treatmentTypes, clients, stylists }) => {
   const { mutate, isPending } = useCreateMutation("treatments");
   const [values, setValues] = useState({
-    treatmentTypeId: "",
+    treatmentTypeId: "1",
     date: "",
-    stylistId: "",
-    clientId: "",
+    stylistId: "2",
+    clientId: "1",
   });
+
+  const [errors, setErrors] = useState({
+    date: [],
+  });
+
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,20 +28,49 @@ export const AddTreatment = ({treatmentTypes,
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    mutate({
-      treatmentTypeId: values.treatmentTypeId,
-    date: values.date,
-    stylistId: values.stylistId,
-    clientId: values.clientId,
-    });
-    setValues({
-      treatmentTypeId: "",
-    date: "",
-    stylistId: "",
-    clientId: "",
-    });
+    let isSuccess = true;
+
+    const newErrors = {
+      date: [],
+    };
+
+    if (!values.date.trim()) {
+      newErrors.date.push("This field is required!");
+      isSuccess = false;
+    }
+
+    setErrors(newErrors);
+
+    if (!isSuccess) {
+      setSuccess(false);
+      return;
+    }
+
+    mutate(
+      {
+        treatmentTypeId: values.treatmentTypeId,
+        date: values.date,
+        stylistId: values.stylistId,
+        clientId: values.clientId,
+      },
+      {
+        onSuccess: () => {
+          setSuccess(true);
+          setValues({
+            treatmentTypeId: "",
+            date: "",
+            stylistId: "",
+            clientId: "",
+          });
+          setErrors({ date: [] });
+          setTimeout(() => setSuccess(false), 3000);
+        },
+      }
+    );
   };
-  return (  <TreatmentForm
+  return (
+    <>
+      <TreatmentForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         values={values}
@@ -46,6 +78,13 @@ export const AddTreatment = ({treatmentTypes,
         stylists={stylists}
         clients={clients}
         treatmentTypes={treatmentTypes}
+        errors={errors}
       />
+      {success && (
+        <p style={{ color: "green", marginTop: "10px" }}>
+          User has been added succesfully!
+        </p>
+      )}
+    </>
   );
 };

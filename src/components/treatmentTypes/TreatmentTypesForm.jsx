@@ -2,7 +2,7 @@ import { StyledButtonForm } from "../styles/StyledButtonForm";
 import { StyledInput } from "../styles/StyledInput";
 import { StyledInputDiv } from "../styles/StyledInputDiv";
 import { FieldErrors } from "../FieldErrors";
-import { ArrowIcon, StyledSelectInput } from "../StyledSelectInput";
+import { ArrowIcon, StyledSelectInput } from "../styles/StyledSelectInput";
 import { SlArrowDown } from "react-icons/sl";
 
 export const TreatmentTypesForm = ({
