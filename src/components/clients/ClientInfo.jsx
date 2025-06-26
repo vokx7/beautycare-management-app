@@ -6,6 +6,8 @@ import { StyledButtonEdit } from "../styles/StyledButtonEdit";
 import { StyledInfoBox } from "../styles/StyledInfoBox";
 import { StyledAvatar } from "../styles/StyledAvatar";
 import { StyledInfoDetails } from "../styles/StyledInfoDetails";
+import { StyledInfoDiv } from "../styles/StyledInfoDiv";
+import { StyledAvatarTitleDiv } from "../styles/StyledAvatarTitleDiv";
 
 export const ClientInfo = ({ client }) => {
   const [mode, setMode] = useState("none");
@@ -16,11 +18,16 @@ export const ClientInfo = ({ client }) => {
 
   return (
     <StyledInfoBox>
-      <div>
-        <p>
-          {client.firstName} {client.lastName}
-        </p>
-        <StyledInfoDetails>tel. {client.phone}</StyledInfoDetails>
+      <StyledInfoDiv>
+        <StyledAvatarTitleDiv>
+          <StyledAvatar src={avatar} alt="user-avatar" />
+          <div>
+            <p style={{ margin: 0, "margin-bottom": "4px" }}>
+              {client.firstName} {client.lastName}
+            </p>
+            <StyledInfoDetails>tel. {client.phone}</StyledInfoDetails>
+          </div>
+        </StyledAvatarTitleDiv>
         <StyledButtonEdit onClick={toggleEditMode}>
           {mode === "edit" ? (
             "Cancel"
@@ -31,11 +38,10 @@ export const ClientInfo = ({ client }) => {
             </>
           )}
         </StyledButtonEdit>
-        {mode === "edit" ? (
-          <EditClient client={client} onSuccess={() => setMode("none")} />
-        ) : null}
-      </div>
-      <StyledAvatar src={avatar} alt="user-avatar" />
+      </StyledInfoDiv>
+      {mode === "edit" ? (
+        <EditClient client={client} onSuccess={() => setMode("none")} />
+      ) : null}
     </StyledInfoBox>
   );
 };

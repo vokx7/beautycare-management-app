@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { EditTreatmentType } from "./EditTreatmentType";
-import { StyledInfoBox } from "../styles/StyledInfoBox";
 import { StyledInfoDetails } from "../styles/StyledInfoDetails";
 import { StyledButtonEdit } from "../styles/StyledButtonEdit";
 import { SlPencil } from "react-icons/sl";
-import { StyledAvatar } from "../styles/StyledAvatar";
-import item from "../../assets/item.png";
+import { StyledInfoDiv } from "../styles/StyledInfoDiv";
+import { StyledInfoBox } from "../styles/StyledInfoBox";
 
 export const TreatmentTypeInfo = ({ treatmentType }) => {
   const [mode, setMode] = useState("none");
@@ -16,11 +15,17 @@ export const TreatmentTypeInfo = ({ treatmentType }) => {
 
   return (
     <StyledInfoBox>
-      <div>
-        <p> {treatmentType.name}</p>
-        <StyledInfoDetails>{treatmentType.duration}mins</StyledInfoDetails>
-        <StyledInfoDetails>{treatmentType.price}$</StyledInfoDetails>
-
+      <StyledInfoDiv>
+        <div>
+          <p style={{ margin: 0, "margin-bottom": "4px" }}>
+            {" "}
+            {treatmentType.name}
+          </p>
+          <StyledInfoDetails>
+            {treatmentType.price}$ - {treatmentType.duration}mins <br />{" "}
+            {treatmentType.specialty}
+          </StyledInfoDetails>
+        </div>
         <StyledButtonEdit onClick={toggleEditMode}>
           {mode === "edit" ? (
             "Cancel"
@@ -31,14 +36,13 @@ export const TreatmentTypeInfo = ({ treatmentType }) => {
             </>
           )}
         </StyledButtonEdit>
-        {mode === "edit" ? (
-          <EditTreatmentType
-            treatmentType={treatmentType}
-            onSuccess={() => setMode("none")}
-          />
-        ) : null}
-      </div>
-      <StyledAvatar src={item} alt="item" />
+      </StyledInfoDiv>
+      {mode === "edit" ? (
+        <EditTreatmentType
+          treatmentType={treatmentType}
+          onSuccess={() => setMode("none")}
+        />
+      ) : null}
     </StyledInfoBox>
   );
 };

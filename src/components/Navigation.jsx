@@ -63,23 +63,23 @@ export const Navigation = () => {
           <MobileOnly>
             <AppLink
               to="/clients"
-              icon={<SlPeople size={32} />}
+              icon={<SlPeople size={22} />}
               title="Clients"
             />
             <AppLink
               to="/stylists"
-              icon={<SlMagicWand size={32} />}
+              icon={<SlMagicWand size={22} />}
               title="Stylists"
             />
-            <AppLink to="." icon={<SlHome size={32} />} title="Home" />
+            <AppLink to="." icon={<SlHome size={22} />} title="Home" />
             <AppLink
               to="/treatmentTypes"
-              icon={<SlPuzzle size={32} />}
+              icon={<SlPuzzle size={22} />}
               title="Services"
             />
             <AppLink
               to="/treatments"
-              icon={<SlBookOpen size={32} />}
+              icon={<SlBookOpen size={22} />}
               title="History"
             />
           </MobileOnly>

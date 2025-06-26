@@ -6,6 +6,8 @@ import { SlPencil } from "react-icons/sl";
 import avatar2 from "../../assets/avatar2.png";
 import { StyledButtonEdit } from "../styles/StyledButtonEdit";
 import { StyledInfoDetails } from "../styles/StyledInfoDetails";
+import { StyledInfoDiv } from "../styles/StyledInfoDiv";
+import { StyledAvatarTitleDiv } from "../styles/StyledAvatarTitleDiv";
 
 // import { DeleteStylistConfirmation } from "./DeleteStylistConfirmation";
 
@@ -22,12 +24,16 @@ export const StylistInfo = ({ stylist }) => {
 
   return (
     <StyledInfoBox>
-      <div>
-        <p>
-          {" "}
-          {stylist.firstName} {stylist.lastName}
-        </p>
-        <StyledInfoDetails>{stylist.specialty}</StyledInfoDetails>
+      <StyledInfoDiv>
+        <StyledAvatarTitleDiv>
+          <StyledAvatar src={avatar2} alt="stylist-avatar" />
+          <div>
+            <p style={{ margin: 0, "margin-bottom": "4px" }}>
+              {stylist.firstName} {stylist.lastName}
+            </p>
+            <StyledInfoDetails>{stylist.specialty}</StyledInfoDetails>
+          </div>
+        </StyledAvatarTitleDiv>
         <StyledButtonEdit onClick={toggleEditMode}>
           {mode === "edit" ? (
             "Cancel"
@@ -38,13 +44,13 @@ export const StylistInfo = ({ stylist }) => {
             </>
           )}
         </StyledButtonEdit>
-        {mode === "edit" ? (
-          <EditStylist stylist={stylist} onSuccess={() => setMode("none")} />
-        ) : null}
+
         {/* <button onClick={toggleDeleteMode}>{mode === 'delete' ? 'Cancel' : 'Delete'}</button>
             {mode === 'delete' ? <DeleteStylistConfirmation onCancel={toggleDeleteMode} stylist={stylist}/> : undefined} */}
-      </div>
-      <StyledAvatar src={avatar2} alt="stylist-avatar" />
+      </StyledInfoDiv>
+      {mode === "edit" ? (
+        <EditStylist stylist={stylist} onSuccess={() => setMode("none")} />
+      ) : null}
     </StyledInfoBox>
   );
 };

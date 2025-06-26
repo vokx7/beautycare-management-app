@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { EditTreatment } from "./EditTreatment";
 import { StyledInfoBox } from "../styles/StyledInfoBox";
-import history from "../../assets/history.png";
 import { SlPencil } from "react-icons/sl";
 import { StyledInfoDetails } from "../styles/StyledInfoDetails";
 import { StyledButtonEdit } from "../styles/StyledButtonEdit";
-import { StyledAvatar } from "../styles/StyledAvatar";
+import { StyledInfoDiv } from "../styles/StyledInfoDiv";
 
 export const TreatmentInfo = ({
   treatment,
@@ -27,15 +26,20 @@ export const TreatmentInfo = ({
 
   return (
     <StyledInfoBox>
-      <div>
-        <p> {treatmentType?.name} </p>
-        <StyledInfoDetails>
-          Stylist: {stylist?.firstName} {stylist?.lastName}
-        </StyledInfoDetails>
-        <StyledInfoDetails>
-          Client: {client?.firstName} {client?.lastName}
-        </StyledInfoDetails>
-        <StyledInfoDetails>Date: {treatment.date}</StyledInfoDetails>
+      <StyledInfoDiv>
+        <div>
+          <p style={{ margin: 0, "margin-bottom": "4px" }}>
+            {" "}
+            {treatmentType?.name}{" "}
+          </p>
+          <StyledInfoDetails>
+            Stylist: {stylist?.firstName} {stylist?.lastName}
+          </StyledInfoDetails>
+          <StyledInfoDetails>
+            Client: {client?.firstName} {client?.lastName}
+          </StyledInfoDetails>
+          <StyledInfoDetails>Date: {treatment.date}</StyledInfoDetails>
+        </div>
         <StyledButtonEdit onClick={toggleEditMode}>
           {mode === "edit" ? (
             "Cancel"
@@ -46,17 +50,16 @@ export const TreatmentInfo = ({
             </>
           )}
         </StyledButtonEdit>
-        {mode === "edit" ? (
-          <EditTreatment
-            treatment={treatment}
-            treatmentTypes={treatmentTypes}
-            clients={clients}
-            stylists={stylists}
-            onSuccess={() => setMode("none")}
-          />
-        ) : null}
-      </div>
-      <StyledAvatar src={history} alt="history-avatar" />
+      </StyledInfoDiv>
+      {mode === "edit" ? (
+        <EditTreatment
+          treatment={treatment}
+          treatmentTypes={treatmentTypes}
+          clients={clients}
+          stylists={stylists}
+          onSuccess={() => setMode("none")}
+        />
+      ) : null}
     </StyledInfoBox>
   );
 };

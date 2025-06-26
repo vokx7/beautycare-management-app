@@ -77,11 +77,11 @@
   ],
   "treatmentTypes": [
     {
-      "id": "1",
-      "name": "Women's haircut",
+      "name": "Women's haircutf",
       "duration": "45",
       "price": "110",
-      "specialty": "hairdressing"
+      "specialty": "hairdressing",
+      "id": "1"
     },
     {
       "id": "2",
