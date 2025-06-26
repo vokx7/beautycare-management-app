@@ -121,13 +121,6 @@
   ],
   "treatments": [
     {
-      "treatmentTypeId": "4",
-      "date": "2025-06-03",
-      "stylistId": "6ae4",
-      "clientId": "2",
-      "id": "1"
-    },
-    {
       "id": "2",
       "treatmentTypeId": "5",
       "date": "2025-05-30",

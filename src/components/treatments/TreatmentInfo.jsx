@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { EditTreatment } from "./EditTreatment";
 import { StyledInfoBox } from "../styles/StyledInfoBox";
-import { SlPencil } from "react-icons/sl";
+import { SlPencil, SlTrash } from "react-icons/sl";
 import { StyledInfoDetails } from "../styles/StyledInfoDetails";
 import { StyledButtonEdit } from "../styles/StyledButtonEdit";
 import { StyledInfoDiv } from "../styles/StyledInfoDiv";
+import { DeleteTreatmentConfirmation } from "./DeleteTreatmentConfirmation";
 
 export const TreatmentInfo = ({
   treatment,
@@ -18,6 +19,10 @@ export const TreatmentInfo = ({
     setMode((prevMode) => (prevMode === "edit" ? "none" : "edit"));
   };
 
+  const toggleDeleteMode = () => {
+    setMode((prevMode) => (prevMode === "delete" ? "none" : "delete"));
+  };
+
   const stylist = stylists.find((s) => s.id === treatment.stylistId);
   const client = clients.find((c) => c.id === treatment.clientId);
   const treatmentType = treatmentTypes.find(
@@ -26,7 +31,7 @@ export const TreatmentInfo = ({
 
   return (
     <StyledInfoBox>
-      <StyledInfoDiv>
+      <StyledInfoDiv alignItems="flex-start">
         <div>
           <p style={{ margin: 0, "margin-bottom": "4px" }}>
             {" "}
@@ -40,16 +45,20 @@ export const TreatmentInfo = ({
           </StyledInfoDetails>
           <StyledInfoDetails>Date: {treatment.date}</StyledInfoDetails>
         </div>
-        <StyledButtonEdit onClick={toggleEditMode}>
-          {mode === "edit" ? (
-            "Cancel"
-          ) : (
-            <>
-              <SlPencil />
-              Edit
-            </>
-          )}
-        </StyledButtonEdit>
+        <div style={{ display: "flex", "flex-direction": "row", gap: "8px" }}>
+          <StyledButtonEdit onClick={toggleEditMode} width="40px">
+            {mode === "edit" ? (
+              "Cancel"
+            ) : (
+              <>
+                <SlPencil />
+              </>
+            )}
+          </StyledButtonEdit>
+          <StyledButtonEdit onClick={toggleDeleteMode} width="40px">
+            <SlTrash />
+          </StyledButtonEdit>
+        </div>
       </StyledInfoDiv>
       {mode === "edit" ? (
         <EditTreatment
@@ -60,6 +69,12 @@ export const TreatmentInfo = ({
           onSuccess={() => setMode("none")}
         />
       ) : null}
+      {mode === "delete" ? (
+        <DeleteTreatmentConfirmation
+          onCancel={toggleDeleteMode}
+          treatment={treatment}
+        />
+      ) : undefined}
     </StyledInfoBox>
   );
 };

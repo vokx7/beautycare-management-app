@@ -9,7 +9,7 @@ export const StyledButtonEdit = styled.button`
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  width: 80px;
+  width: ${({ width }) => width || "80px"};
   display: inline-flex;
   align-items: center;
   justify-content: center;
