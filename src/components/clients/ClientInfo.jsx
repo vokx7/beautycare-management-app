@@ -22,21 +22,18 @@ export const ClientInfo = ({ client }) => {
         <StyledAvatarTitleDiv>
           <StyledAvatar src={avatar} alt="user-avatar" />
           <div>
-            <p style={{ margin: 0, "margin-bottom": "4px" }}>
+            <p style={{ margin: 0, marginBottom: "4px" }}>
               {client.firstName} {client.lastName}
             </p>
             <StyledInfoDetails>tel. {client.phone}</StyledInfoDetails>
           </div>
         </StyledAvatarTitleDiv>
-        <StyledButtonEdit onClick={toggleEditMode}>
-          {mode === "edit" ? (
-            "Cancel"
-          ) : (
-            <>
-              <SlPencil />
-              Edit
-            </>
-          )}
+        <StyledButtonEdit
+          onClick={toggleEditMode}
+          width="30px"
+          $active={mode === "edit"}
+        >
+          <SlPencil />
         </StyledButtonEdit>
       </StyledInfoDiv>
       {mode === "edit" ? (

@@ -28,21 +28,18 @@ export const StylistInfo = ({ stylist }) => {
         <StyledAvatarTitleDiv>
           <StyledAvatar src={avatar2} alt="stylist-avatar" />
           <div>
-            <p style={{ margin: 0, "margin-bottom": "4px" }}>
+            <p style={{ margin: 0, marginBottom: "4px" }}>
               {stylist.firstName} {stylist.lastName}
             </p>
             <StyledInfoDetails>{stylist.specialty}</StyledInfoDetails>
           </div>
         </StyledAvatarTitleDiv>
-        <StyledButtonEdit onClick={toggleEditMode}>
-          {mode === "edit" ? (
-            "Cancel"
-          ) : (
-            <>
-              <SlPencil />
-              Edit
-            </>
-          )}
+        <StyledButtonEdit
+          onClick={toggleEditMode}
+          width="30px"
+          $active={mode === "edit"}
+        >
+          <SlPencil />
         </StyledButtonEdit>
 
         {/* <button onClick={toggleDeleteMode}>{mode === 'delete' ? 'Cancel' : 'Delete'}</button>

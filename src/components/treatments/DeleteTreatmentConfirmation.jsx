@@ -1,4 +1,5 @@
 import { useDeleteTreatmentsMutation } from "../../queries/useDeleteTreatmentsMutation";
+import { StyledButtonDelete } from "../styles/StyledButtonDelete";
 import { StyledButtonEdit } from "../styles/StyledButtonEdit";
 
 export const DeleteTreatmentConfirmation = ({ onCancel, treatment }) => {
@@ -7,10 +8,22 @@ export const DeleteTreatmentConfirmation = ({ onCancel, treatment }) => {
   if (isPending) return <p>Loading...</p>;
 
   return (
-    <div>
-      <p>Do you really want to delete this record?</p>
-      <StyledButtonEdit onClick={() => mutate()}>Delete</StyledButtonEdit>
-      <StyledButtonEdit onClick={onCancel}>Cancel</StyledButtonEdit>
+    <div style={{ textAlign: "center" }}>
+      <p>
+        Do you really want to{" "}
+        <span style={{ color: "#914141", fontWeight: "bold" }}>delete</span>{" "}
+        this record?
+      </p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <StyledButtonDelete onClick={() => mutate()}>Delete</StyledButtonDelete>
+        <StyledButtonEdit onClick={onCancel}>Cancel</StyledButtonEdit>
+      </div>
     </div>
   );
 };

@@ -31,9 +31,9 @@ export const TreatmentInfo = ({
 
   return (
     <StyledInfoBox>
-      <StyledInfoDiv alignItems="flex-start">
+      <StyledInfoDiv $alignItems="flex-start">
         <div>
-          <p style={{ margin: 0, "margin-bottom": "4px" }}>
+          <p style={{ margin: 0, marginBottom: "4px" }}>
             {" "}
             {treatmentType?.name}{" "}
           </p>
@@ -45,17 +45,19 @@ export const TreatmentInfo = ({
           </StyledInfoDetails>
           <StyledInfoDetails>Date: {treatment.date}</StyledInfoDetails>
         </div>
-        <div style={{ display: "flex", "flex-direction": "row", gap: "8px" }}>
-          <StyledButtonEdit onClick={toggleEditMode} width="40px">
-            {mode === "edit" ? (
-              "Cancel"
-            ) : (
-              <>
-                <SlPencil />
-              </>
-            )}
+        <div style={{ display: "flex", flexDirection: "row", gap: "8px" }}>
+          <StyledButtonEdit
+            $active={mode === "edit"}
+            onClick={toggleEditMode}
+            width="30px"
+          >
+            <SlPencil />
           </StyledButtonEdit>
-          <StyledButtonEdit onClick={toggleDeleteMode} width="40px">
+          <StyledButtonEdit
+            $active={mode === "delete"}
+            onClick={toggleDeleteMode}
+            width="30px"
+          >
             <SlTrash />
           </StyledButtonEdit>
         </div>

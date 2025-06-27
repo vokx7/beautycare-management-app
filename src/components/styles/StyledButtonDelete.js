@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
-export const StyledButtonEdit = styled.button`
-  background-color: ${({ theme, $active }) =>
-    $active ? theme.colors.brand : theme.colors.bacgroundSecondary};
-  color: ${({ theme, $active }) =>
-    $active ? theme.colors.white : theme.colors.primary};
+export const StyledButtonDelete = styled.button`
+  background-color: ${({ theme }) => theme.colors.brand};
+  color: ${({ theme }) => theme.colors.white};
   border-radius: 40px;
   padding: 6px 0;
   border: none;

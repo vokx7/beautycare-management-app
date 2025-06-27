@@ -121,18 +121,25 @@
   ],
   "treatments": [
     {
-      "id": "2",
-      "treatmentTypeId": "5",
-      "date": "2025-05-30",
-      "stylistId": "4",
+      "id": "1398",
+      "treatmentTypeId": "4",
+      "date": "2025-06-20",
+      "stylistId": "2",
       "clientId": "2"
     },
     {
-      "id": "819f",
-      "treatmentTypeId": "5e36",
-      "date": "2025-06-05",
-      "stylistId": "4",
-      "clientId": "cf0a"
+      "id": "21bf",
+      "treatmentTypeId": "4",
+      "date": "2025-06-27",
+      "stylistId": "9593",
+      "clientId": "2"
+    },
+    {
+      "id": "2342",
+      "treatmentTypeId": "4",
+      "date": "2025-06-09",
+      "stylistId": "6",
+      "clientId": "2"
     }
   ]
 }

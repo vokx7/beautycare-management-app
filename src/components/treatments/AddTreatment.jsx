@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useCreateMutation } from "../../queries/useCreateMutation";
 import { TreatmentForm } from "./TreatmentForm";
+import { StyledConfirmationInfo } from "../StyledConfirmationInfo";
 
 export const AddTreatment = ({ treatmentTypes, clients, stylists }) => {
   const { mutate, isPending } = useCreateMutation("treatments");
@@ -80,11 +81,7 @@ export const AddTreatment = ({ treatmentTypes, clients, stylists }) => {
         treatmentTypes={treatmentTypes}
         errors={errors}
       />
-      {success && (
-        <p style={{ color: "green", marginTop: "10px" }}>
-          User has been added succesfully!
-        </p>
-      )}
+      {success && <StyledConfirmationInfo />}
     </>
   );
 };

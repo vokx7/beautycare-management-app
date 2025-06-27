@@ -16,8 +16,8 @@ const ButtonContainer = styled.div`
 `;
 
 const StyledButton = styled.button`
-  background: ${({ active }) => (active ? "#914141" : "#F5F7FA")};
-  color: ${({ active }) => (active ? "#fff" : "#222222")};
+  background: ${({ $active }) => ($active ? "#914141" : "#F5F7FA")};
+  color: ${({ $active }) => ($active ? "#fff" : "#222222")};
   border-radius: 40px;
   padding: 10px 0;
   border: none;
@@ -39,10 +39,10 @@ export const HeaderElements = ({
     <>
       <Heading>{title}</Heading>
       <ButtonContainer>
-        <StyledButton active={activeList} onClick={onClickList}>
+        <StyledButton $active={activeList} onClick={onClickList}>
           List
         </StyledButton>
-        <StyledButton active={activeAdd} onClick={onClickAdd}>
+        <StyledButton $active={activeAdd} onClick={onClickAdd}>
           Add new
         </StyledButton>
       </ButtonContainer>

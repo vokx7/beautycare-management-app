@@ -17,7 +17,7 @@ export const TreatmentTypeInfo = ({ treatmentType }) => {
     <StyledInfoBox>
       <StyledInfoDiv>
         <div>
-          <p style={{ margin: 0, "margin-bottom": "4px" }}>
+          <p style={{ margin: 0, marginBottom: "4px" }}>
             {" "}
             {treatmentType.name}
           </p>
@@ -26,15 +26,12 @@ export const TreatmentTypeInfo = ({ treatmentType }) => {
             {treatmentType.specialty}
           </StyledInfoDetails>
         </div>
-        <StyledButtonEdit onClick={toggleEditMode}>
-          {mode === "edit" ? (
-            "Cancel"
-          ) : (
-            <>
-              <SlPencil />
-              Edit
-            </>
-          )}
+        <StyledButtonEdit
+          onClick={toggleEditMode}
+          width="30px"
+          $active={mode === "edit"}
+        >
+          <SlPencil />
         </StyledButtonEdit>
       </StyledInfoDiv>
       {mode === "edit" ? (
