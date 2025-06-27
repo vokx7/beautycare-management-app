@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { StyledInfoDetails } from "../styles/StyledInfoDetails";
 
-const StyledRecentAppointmentBox = styled.div`
+export const StyledRecentAppointmentBox = styled.div`
   display: flex;
   flex-direction: column;
   padding: 8px 20px;

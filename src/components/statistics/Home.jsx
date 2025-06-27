@@ -3,6 +3,7 @@ import { Container } from "../styles/Container";
 import { useGetQuery } from "../../queries/useGetQuery";
 import { RecentAppointmentBox } from "./RecentAppointmentBox";
 import { Top3TreatmentTypes } from "./Top3TreatmentTypes";
+import { TreatmentsChart } from "./TreatmentsChart";
 
 const Heading = styled.span`
   color: ${({ theme }) => theme.colors.black};
@@ -51,6 +52,7 @@ export const Home = () => {
         treatments={treatments}
         treatmentTypes={treatmentTypes}
       />
+      <TreatmentsChart treatments={treatments} />
     </Container>
   );
 };
