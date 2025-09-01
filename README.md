@@ -4,8 +4,6 @@
 
 ## 📸 Screenshots
 
-### Screenshots
-
 | Statistics | Clients | Add New Client |
 |-----------|---------|----------------|
 | <img src="public/screenshots/statistics.png" width="300"/> | <img src="public/screenshots/clients.png" width="300"/> | <img src="public/screenshots/clients-add.png" width="300"/> |
