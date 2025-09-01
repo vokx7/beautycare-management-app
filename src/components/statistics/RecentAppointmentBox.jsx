@@ -18,7 +18,11 @@ export const RecentAppointmentBox = ({
   stylists,
   clients,
 }) => {
-  const sortedAppointments = [...treatments].sort(
+  const today = new Date();
+
+  const pastAppointments = treatments.filter((t) => new Date(t.date) <= today);
+
+  const sortedAppointments = pastAppointments.sort(
     (a, b) => new Date(b.date) - new Date(a.date)
   );
   const recentAppointment = sortedAppointments[0];

@@ -416,11 +416,11 @@
   ],
   "treatments": [
     {
-      "id": "5a2791",
       "treatmentTypeId": "5",
-      "date": "2025-02-11",
+      "date": "2025-09-01",
       "stylistId": "1",
-      "clientId": "8"
+      "clientId": "8",
+      "id": "5a2791"
     },
     {
       "id": "7c34b6",
