@@ -9,7 +9,7 @@
 | <img src="public/screenshots/statistics.png" width="300"/> | <img src="public/screenshots/clients.png" width="300"/> | <img src="public/screenshots/clients-add.png" width="300"/> |
 
 
-| Stylists | Treatment Types | Treatments |
+| Stylists | Services | Treatments |
 |----------|-----------------|------------|
 | <img src="public/screenshots/stylists.png" width="300"/> | <img src="public/screenshots/treatmentTypes.png" width="300"/> | <img src="public/screenshots/treatments.png" width="300"/> |
 
@@ -20,7 +20,7 @@
 **Database Management**:
 - **Clients** – list of clients, ability to add and edit data.
 - **Stylists** – list of stylists, ability to add and edit data.
-- **Services** – list of services, ability to add and edit data.
+- **Treatment Types** – list of services, ability to add and edit data.
 - **Treatments** – list of treatments, ability to add and edit (with validation of the assignment of the appropriate specialist for a given service), and delete with confirmation.
 
 **Statistics**:
@@ -42,7 +42,7 @@
 
 - **React** (with Vite) – fast rendering and modern build.
 - **React Router** – navigation and tab support.
-- **React Query** – optimal HTTP query management.
+- **React Query** – HTTP query management.
 - **styled-components** – CSS-in-JS.
 - **json-server** – mock API with a local database.
 
