@@ -2,6 +2,21 @@
 
 **BeautyCare Management App** is a management system for handling clients, stylists, services, and treatments in a beauty salon. It also provides statistics about recently performed treatments, top services, and monthly trends.
 
+## 📸 Screenshots
+
+### Screenshots
+
+| Statistics | Clients | Add New Client |
+|-----------|---------|----------------|
+| <img src="public/screenshots/statistics.png" width="300"/> | <img src="public/screenshots/clients.png" width="300"/> | <img src="public/screenshots/clients-add.png" width="300"/> |
+
+
+| Stylists | Treatment Types | Treatments |
+|----------|-----------------|------------|
+| <img src="public/screenshots/stylists.png" width="300"/> | <img src="public/screenshots/treatmentTypes.png" width="300"/> | <img src="public/screenshots/treatments.png" width="300"/> |
+
+
+
 ## ✅ Features
 
 **Database Management**:
