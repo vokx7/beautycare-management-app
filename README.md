@@ -45,6 +45,7 @@
 - **React Query** – HTTP query management.
 - **styled-components** – CSS-in-JS.
 - **json-server** – mock API with a local database.
+- **Recharts** - creating statistics charts.
 
 ## 📂 Database Structure (`db.json`)
 
